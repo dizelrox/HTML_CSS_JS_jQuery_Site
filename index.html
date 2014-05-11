@@ -1,0 +1,80 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="customCSS.css" />
+    <script src="modernizr.custom.63321.js"></script>
+    <script src="jquery.catslider.js"></script>
+
+</head>
+<body>
+    <div id="mainDiv">
+    <div id="header"><p><b>Progress through Technology</b></p></div>
+    <div id="logo"></div>
+    	<div id = "videoDiv">
+			<video width="1080" height="720" id="vid" autoplay>
+  			<source src="Audi TT Coupe Range.mp4" type="video/mp4">
+			</video>
+        </div>
+        <div id="back"></div>
+        <div id="cart" style="z-index:2;">
+            <div style='font-weight:900; position:absolute; top:30px;'>You Selected :</div>
+            <div style='position:absolute; left:123px;' id="imge"></div>
+            <div id="mdel" style='position: absolute; left: 400px; height: 100px; width: 398px;'></div>
+            <div style='position: absolute; top: 118px; left: 18px; height: 200px; width: 300px; background: #849dd3; border-radius: 15px; padding-left:5px;' id="inf"></div>
+            <div id="options" style="position: absolute; top: 134px; left: 458px; height: 325px; width: 234px; background: #849dd3; border-radius: 15px; ">
+                <div style='font-weight: 900; position: absolute; top: 15px; left: 80px; font-size: 20px; text-decoration: underline;'>Options</div>
+
+                <div style='font-weight:450; position:absolute; top:40px;  left:10px; font-size:20px; text-decoration:underline; color:white;'>Brakes</div>
+                <form style="position: absolute; top: 72px; left: 10px;">
+                    <input type="radio" class="radios" name="brakes" value="0" id="def1" checked>Stock<br>
+                    <input type="radio" class="radios" name="brakes" value="1000" >Brembo Racing 1000$<br>
+                    <input type="radio" class="radios"  name="brakes" value="2000">Ceramic 2000$
+                </form>
+                <div style='font-weight: 450; position: absolute; top: 125px; left: 10px; font-size: 20px; text-decoration: underline; color: white;'>Saloon</div>
+                <form style="position: absolute; top: 157px; left: 10px;">
+                    <input type="radio" class="radios" name="saloon" value="0" id="def2" checked>Stock<br>
+                    <input type="radio" class="radios"  name="saloon" value="1850">Alcantara 1850$<br>
+                    <input type="radio" class="radios"  name="saloon" value="1300">Leather 1300$
+                </form>
+                <div style='font-weight: 450; position: absolute; top: 210px; left: 10px; font-size: 20px; text-decoration: underline; color: white;'>Wheels</div>
+                <form style="position: absolute; top: 243px; left: 10px;">
+                    <input type="radio" class="radios" name="wheels" value="0" id="def3" checked>Stock<br>
+                    <input type="radio" class="radios"  name="wheels" value="2000">18" 2000$<br>
+                    <input type="radio" class="radios" name="wheels" value="3000">21" 3000$
+                </form>
+
+            </div>
+            <div style='font-weight: 900; position: absolute; top: 410px; left: 27px; font-size: 49px; text-decoration: underline;' id="total">Total:</div>
+            <div style='font-weight: 900; position: absolute; top: 410px; left: 162px; font-size: 49px; color: #849dd3;' id="sum"></div>
+            <button type="button" id="backbtn" onclick="backProcedure()" style="position: absolute; top: 488px; left: 27px; font-weight: bolder; font-size: xx-large; background: #849dd3; height: 48px; width: 90px; border-radius: 20px;">Back</button>
+            <button type="button" id="prcbtn" onclick="proceed()" style="position: absolute; top: 488px; left: 169px; font-weight: bolder; font-size: xx-large; background: #849dd3; height: 48px; width: 140px; border-radius: 20px;">Proceed</button>
+                 </div>
+
+        <div id="mi-slider" class="mi-slider">
+            <ul>
+                <li class="carSelect" id="tt-coupe"><a href="#"><img src="images/tt-coupe.png" alt="img01"><h4 class="mname">TT Coupe</h4></a></li>
+                <li class="carSelect" id="tt-roadster"><a href="#"><img src="images/tt-roadster.png" alt="img02"><h4 class="mname">TT Roadster</h4></a></li>
+                <li class="carSelect" id="tts-coupe"><a href="#"><img src="images/tts-coupe.png" alt="img03"><h4 class="mname">TTS Coupe</h4></a></li>
+                <li class="carSelect" id="tts-roadster"><a href="#"><img src="images/tts-roadster.png" alt="img04"><h4 class="mname">TTS Roadster</h4></a></li>
+            </ul>
+            <ul>
+                <li class="carSelect" id="tt-drift1"><a href="#"><img src="images/tt-drift1.png" alt="img05"><h4 class="mname">TT Coupe Drift Series Stage 3</h4></a></li>
+                <li class="carSelect" id="tt-drift2"><a href="#"><img src="images/tt-drift2.png" alt="img06"><h4 class="mname">TT Coupe Drift Slim</h4></a></li>
+                <li class="carSelect" id="tt-drift3"><a href="#"><img src="images/tt-drift3.png" alt="img07"><h4 class="mname">TT Coupe Drift Series Stage 2</h4></a></li>
+            </ul>
+            <ul>
+                <li class="carSelect" id="tt-track1"><a href="#"><img src="images/tt-track1.png" alt="img09"><h4 class="mname">TT Coupe Track Edition v1</h4></a></li>
+                <li class="carSelect" id="tt-track2"><a href="#"><img src="images/tt-track2.png" alt="img10"><h4 class="mname">TT Formula</h4></a></li>
+                <li class="carSelect" id="tt-track3"><a href="#"><img src="images/tt-track3.png" alt="img11"><h4 class="mname">TT Coupe Special Edition</h4></a></li>
+            </ul>
+            <nav>
+                <a href="#" class="choises">Stock</a>
+                <a href="#" class="choises">Drift Package</a>
+                <a href="#" class="choises">Track Package</a>
+            </nav>
+        </div>
+    </div>
+    <script src="customJS.js"></script>
+</body>
+</html>
